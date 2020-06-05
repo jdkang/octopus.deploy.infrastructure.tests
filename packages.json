@@ -1,0 +1,22 @@
+{
+    "packageRoot": ".\\packages",
+    "packages": [
+        {
+            "typecheck": "Octopus.Client.OctopusServerEndpoint",
+            "paths": [
+                "dotnetdeps\\Octopus.Client\\lib\\net45\\*.dll",
+                "dotnetdeps\\Newtonsoft.Json\\lib\\net45\\*.dll"
+            ]
+        }
+    ],
+    "psmodules": [
+        {
+            "name": "Pester",
+            "path": "psbuild\\Pester\\tools\\Pester.psm1"
+        },
+        {
+            "name": "Invoke-Build",
+            "path": "psbuild\\Invoke-Build\\tools\\Invoke-Build.ps1"
+        }
+    ]
+}

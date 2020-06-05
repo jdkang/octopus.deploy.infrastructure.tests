@@ -1,0 +1,6 @@
+[Ll]ib/
+build/paket.exe
+packages/
+buildartifacts/
+paket-files/
+.paket/

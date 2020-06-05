@@ -1,0 +1,17 @@
+IMPORT-TARGETS: FALSE
+
+GROUP dotnetdeps
+RESTRICTION: == net45
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Newtonsoft.Json (9.0.1)
+    Octodiff (1.2.1)
+    Octopus.Client (4.47.1)
+      Octodiff (>= 1.2.1)
+
+GROUP psbuild
+RESTRICTION: == net45
+NUGET
+  remote: https://www.powershellgallery.com/api/v2
+    InvokeBuild (5.6.0)
+    Pester (4.10.1)

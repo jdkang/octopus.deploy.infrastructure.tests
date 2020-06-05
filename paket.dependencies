@@ -1,0 +1,15 @@
+import_targets: false
+
+group dotnetdeps
+    framework: net45
+    source https://api.nuget.org/v3/index.json
+
+    nuget Newtonsoft.Json ~> 9.0
+    nuget Octopus.Client ~> 4.14
+
+group psbuild
+    framework: net45
+    source https://www.powershellgallery.com/api/v2/
+
+    nuget InvokeBuild ~> 5.4
+    nuget Pester ~> 4.3

@@ -14,6 +14,7 @@ Some featured integrations:
 
 **TOC**
 - [Setup](#Setup)
+  - [Environment / Requirements](#Environment--Requirements)
   - [Required Values](#Required-Values)
   - [Optional Values](#Optional-Values)
 - [Build](#Build)
@@ -34,6 +35,13 @@ Some featured integrations:
 - PS variable (`$var`) within scope
 - Environment Variable (e.g. `setx`, `$ENV:`, TeamCity params, etc) 
   - Locally set with `.\devenv\Set-OctopusApiTestEnv.ps1`
+
+## Environment / Requirements
+Tested with:
+- Powershell v5.1 (though Pester may work with PS Core)
+- Windows + .NET 4.5+ (though one _could_ try swapping out the `Octopus.Client` to the .ENT Core version)
+
+It's very possible this might work with Dotnet Core and Linux/MacOS -- but it has not been tested.
 
 ## Required Values
  - `OctopusUrl`

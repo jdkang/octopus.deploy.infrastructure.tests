@@ -38,8 +38,13 @@ Some featured integrations:
 
 ## Environment / Requirements
 Tested with:
-- Powershell v5.1 (though Pester may work with PS Core)
+- Powershell `5.1` (though Pester may work with PS Core)
 - Windows + .NET 4.5+ (though one _could_ try swapping out the `Octopus.Client` to the .ENT Core version)
+  - Right now the DLLs are hard-coded to `net45/*` in `packages.json`
+- [Paket](https://fsprojects.github.io/Paket/installation.html) for dependencies, which `build.ps1` will attempt to bootstrap/locate by one of the (2) ways:
+  - `.NET SDK 3.0` - will attempt to [restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-restore) the local tool
+  - `.NET SDK 2.1` - will attempt to install the global tool
+  - `paket.exe` in `PATH` - for example, you could add a [TeamCity Agent Tool](https://www.jetbrains.com/help/teamcity/installing-agent-tools.html) and update `$ENV:PATH += ';%teamcity.tool.<installed_tool_ID>%` before execution.
 
 It's very possible this might work with Dotnet Core and Linux/MacOS -- but it has not been tested.
 
